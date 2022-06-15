@@ -1,5 +1,5 @@
 
-# Bootstrap 4.4.1 Boilerplate - Basic
+# To Do app
 
 This is a Bootstrap 4.4.1 Boilerplate with Gulp 4+. Sass, browser-sync.
 
