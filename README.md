@@ -1,5 +1,5 @@
 
-# To Do app
+# Todo App
 
 Install $ `npm install`
 Init $  `npm init`
