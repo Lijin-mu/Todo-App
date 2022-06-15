@@ -1,0 +1,50 @@
+.list{
+  width:100%;
+  height:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding:10px;
+  position:relative;
+  border:1px solid $border-color;
+  border-top:0;
+  &__select{
+    width: 1px;
+    height: 1px;
+    border: none;
+    background: transparent;
+    margin: 0;
+    margin-top: -20px;
+    position:relative;
+    appearance:none;
+    &:before{
+      @extend .fontawesome-icons;
+      content: "\f111";
+      font-weight: normal;
+      font-size:15px;
+      top:0;
+      left:0;
+      cursor:pointer;
+    }
+    &:checked::before{
+      content:"\f058";
+      color:$success-color;
+    }
+  }
+  &__content{
+    margin-left:25px;
+    text-align:left;
+    flex:1;
+  }
+  &__delete{
+    margin:0;
+    padding:10px;
+    padding-right:0;
+    cursor:pointer;
+    color:$error-color;
+    &:hover{
+       color:$black-color;
+    }
+  }
+  
+}
