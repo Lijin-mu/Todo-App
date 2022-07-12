@@ -2,8 +2,7 @@ const input = document.getElementById("task-input");
 const inputBtn = document.querySelector(".add-btn");
 const toDoContainer = $(".todo__list");
 
-let taskList = [
-  {
+let taskList = [{
     status: false,
     task: "Do task 1"
   },
@@ -26,8 +25,8 @@ var toDo = {
     $(".todo__list").append(
       $(
         '<div class="list"><input class="list__select" type="checkbox" /><div class="list__content">' +
-          elem.task +
-          '</div><div class="list__delete"><i class="fas fa-trash-alt"></i></div></div>'
+        elem.task +
+        '</div><div class="list__delete"><i class="fas fa-trash-alt"></i></div></div>'
       )
     );
   },
@@ -46,9 +45,23 @@ var toDo = {
   addTask: function () {
     $(document).on("click", ".add-btn", function () {
       let inputData = $("#task-input").val();
-      let itemarray = { status: false, task: inputData };
+      let itemarray = {
+        status: false,
+        task: inputData
+      };
       toDo.addItem(itemarray);
       $("#task-input").val("");
+    });
+    $('#task-input').bind('keypress', function (e) {
+      if (e.keyCode == 13) {
+        let inputData = $("#task-input").val();
+        let itemarray = {
+          status: false,
+          task: inputData
+        };
+        toDo.addItem(itemarray);
+        $("#task-input").val("");
+      }
     });
   },
 
